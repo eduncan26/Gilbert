@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C89E6B0-5FC6-416A-A809-6D2129E20E75}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Gilbert.Web", "src\Gilbert.Web\Gilbert.Web.xproj", "{4D6E9F66-872C-4E88-AFBD-DA5EE40C55F1}"
