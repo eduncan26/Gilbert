@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Gilbert.Web", "src\Gilbert.Web\Gilbert.Web.xproj", "{4D6E9F66-872C-4E88-AFBD-DA5EE40C55F1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03A6DC5A-BE8A-41B8-8875-69AD528EA62D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Gilbert.Test", "test\Gilbert.Test\Gilbert.Test.xproj", "{12606B66-AE7B-406B-B110-45E5F83B2FFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{4D6E9F66-872C-4E88-AFBD-DA5EE40C55F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D6E9F66-872C-4E88-AFBD-DA5EE40C55F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D6E9F66-872C-4E88-AFBD-DA5EE40C55F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12606B66-AE7B-406B-B110-45E5F83B2FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12606B66-AE7B-406B-B110-45E5F83B2FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12606B66-AE7B-406B-B110-45E5F83B2FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12606B66-AE7B-406B-B110-45E5F83B2FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4D6E9F66-872C-4E88-AFBD-DA5EE40C55F1} = {E71FCB9C-A9B1-46B8-822E-C33112C1F454}
+		{12606B66-AE7B-406B-B110-45E5F83B2FFD} = {03A6DC5A-BE8A-41B8-8875-69AD528EA62D}
 	EndGlobalSection
 EndGlobal
