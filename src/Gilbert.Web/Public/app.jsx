@@ -1,12 +1,8 @@
-﻿require('./app.sass');
+﻿import './app.scss';
 import 'bootstrap-sass';
+import $ from 'jquery';
 import React from 'react';
 import { render } from 'react-dom';
+import Router from './Router';
 
-class App extends React.Component {
-    render() {
-        return <p>Hello React!</p>;
-    }
-}
-
-render(<App/>, document.getElementById('app'));
+render(Router , document.getElementById('app'));

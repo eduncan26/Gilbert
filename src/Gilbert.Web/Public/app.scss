@@ -1,0 +1,12 @@
+﻿@import 'css/bootstrap';
+@import 'css/variables';
+@import 'css/mixins';
+@import 'css/header';
+@import 'css/footer';
+@import 'css/sidebar';
+
+html {
+    body {
+        margin-top: $header-min-height + ($header-min-height / 2);
+    }
+}

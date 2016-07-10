@@ -1,0 +1,28 @@
+﻿@import 'mixins';
+@import 'variables';
+
+aside.left-navigation {
+    width: 75%;
+    background: {
+        color: #fff;
+    }
+    padding: 0 0 8px 0;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -1000px;
+    @include transition(350ms ease);
+
+    @media #{$tablet} {
+        width: 50%;
+    }
+
+    @media #{$mobile} {
+        width: 25%;
+    }
+
+    &.open {
+        left: 0;
+    }
+}

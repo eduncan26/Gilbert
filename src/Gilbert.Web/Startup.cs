@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using Gilbert.Web.Models;
 
 namespace Gilbert.Web
 {
@@ -24,6 +26,9 @@ namespace Gilbert.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var dbConnection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<PostContext>(options => options.UseInMemoryDatabase());
+
             services.AddMvc().AddJsonOptions(opts =>
             {
                 opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
