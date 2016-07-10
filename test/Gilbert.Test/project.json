@@ -5,6 +5,7 @@
 
   "dependencies": {
     "xunit": "2.2.0-beta2-build3300",
+    "Gilbert.Web": "1.0.0-*",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
 
@@ -19,7 +20,7 @@
     }
   },
 
-  "buildOptions": { 
+  "buildOptions": {
     "copyToOutput": {
       "include": [ "xunit.runner.json" ]
     }

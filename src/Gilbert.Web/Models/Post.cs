@@ -11,7 +11,6 @@ namespace Gilbert.Web.Models
 
     public class Post
     {
-
         public int ID { get; set; }
         public string Title { get; set; }
         public List<Comment> Comments { get; set; }
