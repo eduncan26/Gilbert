@@ -23,3 +23,16 @@
        -moz-box-shadow: $params;
             box-shadow: $params;
 }
+
+@mixin set-fixed-navbar-container() {
+    position: fixed;
+    width: 85%;
+
+    @media #{$tablet} {
+        width: 35%;
+    }
+
+    @media #{$desktop} {
+        width: 35%;
+    }
+}

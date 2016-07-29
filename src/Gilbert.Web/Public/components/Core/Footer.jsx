@@ -1,16 +1,18 @@
 ﻿import React from 'react';
 import App from '../../constants/Application';
+import DateService from '../../services/DateService';
+
+let _dateService
 
 export default class Footer extends React.Component {
-
-    get currentYear() {
-        const date = new Date();
-        return date.getFullYear();
+    constructor(props) {
+        super(props);
+        _dateService = new DateService();
     }
 
     render() {
         return <footer>
-            <span className="copyright">&copy; {this.currentYear} {App.Name}</span>
+            <span className="copyright">&copy; {_dateService.currentYear} {App.HoldingCompany}</span>
         </footer>;
     }
 }

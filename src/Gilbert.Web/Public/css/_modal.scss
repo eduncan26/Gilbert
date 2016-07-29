@@ -1,0 +1,70 @@
+﻿@import 'variables';
+@import 'mixins';
+
+@mixin setModalPosition() {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    @media #{$tablet}, #{$desktop} {
+        top: 90px;
+        bottom: auto;
+        width: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+.default-modal {
+    @include setModalPosition;
+    width: 100%;
+    overflow: auto;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.default-modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header.modal-header {
+    @media #{$tablet}, #{$desktop} {
+        position: relative;
+        background-color: $text-icons-color;
+        color: $primary-color;
+        @include box-shadow(none);
+        .header-call-to-action {
+            color: $primary-text-color;
+        }
+
+        .modal-btn {
+            color: $primary-color !important;
+            background-color: $text-icons-color !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    background-color: $primary-color;
+    @include border-radius(0);
+    @include box-shadow(0 3px 5px $secondary-text-color);
+    border: none;
+    height: 65px;
+
+    .modal-btn {
+        border: 1px solid transparent;
+        color: $text-icons-color;
+        background-color: $primary-color;
+    }
+
+
+}

@@ -4,9 +4,15 @@
 @import 'css/header';
 @import 'css/footer';
 @import 'css/sidebar';
+@import 'css/floatingActionButton';
+@import 'css/modal';
 
 html {
     body {
         margin-top: $header-min-height + ($header-min-height / 2);
+
+        main {
+            padding: 15px;
+        }
     }
 }

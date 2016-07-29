@@ -6,9 +6,16 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+
+    .header-call-to-action {
+        display: inline;
+        color: $text-icons-color;
+        font-size: 24px;
+        vertical-align: top;
+    }
 
     nav.navbar {
+        padding: 0 16px;
         background: {
             color: $primary-color;
         }

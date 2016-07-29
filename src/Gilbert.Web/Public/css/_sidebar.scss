@@ -1,28 +1,92 @@
 ﻿@import 'mixins';
 @import 'variables';
 
-aside.left-navigation {
-    width: 75%;
+.pad-16 {
+    padding: 0 16px;
+}
+
+div#backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 150%;
+    min-width: 100%;
+    z-index: -100;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    @include transition(background-color 350ms ease);
+
+    &.on {
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
+}
+
+aside#left-navigation {
+    @include set-fixed-navbar-container;
     background: {
         color: #fff;
     }
     padding: 0 0 8px 0;
     z-index: 1000;
-    position: fixed;
     top: 0;
     bottom: 0;
     left: -1000px;
     @include transition(350ms ease);
 
-    @media #{$tablet} {
-        width: 50%;
-    }
-
-    @media #{$mobile} {
-        width: 25%;
-    }
-
-    &.open {
+    &.on {
         left: 0;
+    }
+}
+
+button#left-navigation-close {
+    position: relative;
+    margin-right: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 9px 10px;
+    background: {
+        color: transparent;
+        image: none;
+    }
+    border: 1px solid transparent;
+    @include border-radius(4px);
+
+    > i {
+        color: $primary-color;
+    }
+}
+
+div#left-navigation-heading {
+    @extend .pad-16;
+    border-bottom: 1px solid $divider-color;
+
+    h1 {
+        color: $primary-text-color;
+        display: inline-block;
+        font-size: 24px;
+        vertical-align: middle;
+        margin: 0 !important;
+    }
+}
+
+div#left-navigation-links {
+    @extend .pad-16;
+    margin-top: 20px;
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            height: 48px;
+            padding: 8px 16px
+        }
+
+        a {
+            font-size: 16px;
+            color: $primary-text-color;
+        }
     }
 }

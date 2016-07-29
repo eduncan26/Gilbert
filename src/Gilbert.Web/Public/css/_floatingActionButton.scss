@@ -1,0 +1,40 @@
+﻿@import 'variables';
+@import 'mixins';
+
+@mixin getPadding() {
+    bottom: 16px;
+    right: 16px;
+
+    @media #{$desktop} {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    @media #{$tablet} {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+$button-size: 56px;
+$icon-size: 24px;
+
+button.floating-action-btn {
+    position: absolute;
+    @include getPadding();
+    @include border-radius(50%);
+    @include box-shadow(0 3px 7px $secondary-text-color);
+    border: none;
+    background-color: $accent-color;
+    height: $button-size;
+    width: $button-size;
+
+    > i {
+        font-size: $icon-size;
+        color: $text-icons-color;
+        margin: {
+            top: 7px;
+            left: 1px;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 ﻿
 export default {
-    Name: 'Gilbert'
+    Name: 'Gilbert',
+    HoldingCompany: 'Carnivorous Beehive'
 };

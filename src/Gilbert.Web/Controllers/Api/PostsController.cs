@@ -24,6 +24,8 @@ namespace Gilbert.Web.Controllers.Api
         [HttpPost]
         public void Post([FromBody]string value)
         {
+            var test = "test";
+            System.Console.WriteLine(value);
         }
 
         // PUT api/values/5

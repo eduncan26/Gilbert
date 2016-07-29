@@ -1,11 +1,16 @@
-﻿import React from 'react'; 
+﻿import React from 'react';
 import { Router, Route, hashHistory } from 'react-router';
-import Home from './components/Home';
-import About from './components/About';
+import Layout from './components/Layout';
+import PageNotFound from './components/PageNotFound';
+import Home from './components/Home/';
+import Defects from './components/Defects';
 
 export default <Router history={hashHistory}>
     <Router history={hashHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Route component={Layout}>
+            <Route path="/" component={Home} />
+            <Route path="/defects" component={Defects} />
+            <Route path="*" component={PageNotFound} />
+        </Route>
     </Router>
 </Router>;
